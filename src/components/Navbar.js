@@ -6,11 +6,11 @@ function Navbar() {
   const teamType = 'Division: sales';
 
   return (
-    <div>
-      <h1>Our Team</h1>
-      <h3 className={'animate__animated animate__backInLeft'}>
-        {teamType.toUpperCase()}
-      </h3>
+    <div className="ma2">
+      <h1 className="f1">Our Team</h1>
+      <h2 className="animate__animated animate__backInLeft f5 ttu">
+        {teamType}
+      </h2>
     </div>
   );
 }

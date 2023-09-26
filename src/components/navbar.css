@@ -3,7 +3,8 @@
   src: url('./nintendo.otf') format('opentype');
 }
 
-h1 {
+h1,
+h2 {
   font-family: nintendo;
   color: rgb(23, 3, 32);
 }

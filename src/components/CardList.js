@@ -14,7 +14,6 @@ function CardList({ users }) {
           />
         );
       })}
-      ;
     </div>
   );
 }
