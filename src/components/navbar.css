@@ -1,0 +1,9 @@
+@font-face {
+  font-family: nintendo;
+  src: url('./nintendo.otf') format('opentype');
+}
+
+h1 {
+  font-family: nintendo;
+  color: rgb(23, 3, 32);
+}
