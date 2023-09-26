@@ -1,13 +1,13 @@
 import React from 'react';
 
-function Card() {
+function Card({ id, name, email }) {
   return (
     <div>
-      <img src="#" alt="#" />
-      <div>
-        <h2>place holder name</h2>
-        <h3>place holder position</h3>
-        <p>email</p>
+      <img src={`https://robohash.org/${id}?set=set4`} alt="A cool cat" />
+      <div key={id}>
+        <h2>{name}</h2>
+        <h3>Division: Sales</h3>
+        <p>{email}</p>
       </div>
     </div>
   );

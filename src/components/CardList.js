@@ -1,9 +1,20 @@
 import React from 'react';
+import Card from './Card';
 
-function CardList() {
+function CardList({ users }) {
   return (
     <div>
-      <h1>hello</h1>
+      {users.map((user) => {
+        return (
+          <Card
+            key={user.id}
+            id={user.id}
+            name={user.name}
+            email={user.email}
+          />
+        );
+      })}
+      ;
     </div>
   );
 }

@@ -3,7 +3,7 @@ import './navbar.css';
 import 'animate.css';
 
 function Navbar() {
-  const teamType = 'sales';
+  const teamType = 'Division: sales';
 
   return (
     <div>
