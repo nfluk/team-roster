@@ -7,7 +7,9 @@ function Card({ id, name, email }) {
       <div key={id}>
         <h2 className="f6">{name}</h2>
         <h3 className="f5">Division: Sales</h3>
-        <p>{email}</p>
+        <a href={`mailto:${email}`} className="dim">
+          {email}
+        </a>
       </div>
     </div>
   );
