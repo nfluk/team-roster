@@ -4,6 +4,7 @@ import CardList from '../components/CardList';
 
 function App() {
   const [users, setUsers] = useState([]);
+  const [searchfield, setSearchfield] = useState('');
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
@@ -11,10 +12,18 @@ function App() {
       .then((users) => setUsers(users));
   }, []);
 
+  const onSearchChange = (e) => {
+    setSearchfield(e.target.value);
+  };
+
+  const filteredUsers = users.filter((user) => {
+    return user.name.toLowerCase().includes(searchfield.toLowerCase());
+  });
+
   return (
     <div className="tc">
-      <Navbar />
-      <CardList users={users} />
+      <Navbar onSearchChange={onSearchChange} />
+      <CardList users={filteredUsers} />
     </div>
   );
 }
