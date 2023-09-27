@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import CardList from '../components/CardList';
+import Scroll from '../components/Scroll';
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -23,7 +24,9 @@ function App() {
   return (
     <div className="tc">
       <Navbar onSearchChange={onSearchChange} />
-      <CardList users={filteredUsers} />
+      <Scroll>
+        <CardList users={filteredUsers} />
+      </Scroll>
     </div>
   );
 }
