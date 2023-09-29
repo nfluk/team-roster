@@ -3,7 +3,7 @@ import './navbar.css';
 import 'animate.css';
 import SearchBox from './SearchBox';
 
-function Navbar({ onSearchChange, teamType }) {
+function Navbar({ onSearchChange }) {
   return (
     <div className="ma2">
       <h1 className="f1 dark-blue">Our Team</h1>
