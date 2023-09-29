@@ -6,12 +6,19 @@ import Scroll from '../components/Scroll';
 function App() {
   const [users, setUsers] = useState([]);
   const [searchfield, setSearchfield] = useState('');
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then((response) => response.json())
       .then((users) => setUsers(users));
   }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(true);
+    }, 500);
+  });
 
   const onSearchChange = (e) => {
     setSearchfield(e.target.value);
@@ -25,7 +32,7 @@ function App() {
     <div className="tc">
       <Navbar onSearchChange={onSearchChange} />
       <Scroll>
-        <CardList users={filteredUsers} />
+        <CardList users={filteredUsers} loading={loading} />
       </Scroll>
     </div>
   );
