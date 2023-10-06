@@ -8,6 +8,8 @@ function App() {
   const [searchfield, setSearchfield] = useState('');
   const [loading, setLoading] = useState(false);
 
+  const division = 'sales';
+
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then((response) => response.json())
@@ -30,9 +32,9 @@ function App() {
 
   return (
     <div className="tc">
-      <Navbar onSearchChange={onSearchChange} />
+      <Navbar onSearchChange={onSearchChange} division={division} />
       <Scroll>
-        <CardList users={filteredUsers} loading={loading} />
+        <CardList users={filteredUsers} loading={loading} division={division} />
       </Scroll>
     </div>
   );
