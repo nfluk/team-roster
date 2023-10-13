@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactInfo from './ContactInfo';
 
 function Card({ id, firstName, lastName, phone, email, division, title }) {
   return (
@@ -14,15 +15,7 @@ function Card({ id, firstName, lastName, phone, email, division, title }) {
         </h2>
         <h3 className="f5 ttu">{division}</h3>
         <h3 className="f7 ttu">{title}</h3>
-        <div className="bg-light-blue pa1 br3 shadow-3">
-          <p>📞 {phone}</p>
-          <p>
-            ✉️{' '}
-            <a href={`mailto:${email}`} target="blank_" className="dim">
-              {email}
-            </a>
-          </p>
-        </div>
+        <ContactInfo phone={phone} email={email} />
       </div>
     </div>
   );

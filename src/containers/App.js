@@ -30,9 +30,6 @@ function App() {
     const userName = `${user.firstName} ${user.lastName}`;
     return userName.toLowerCase().includes(searchfield.toLowerCase());
   });
-
-  console.log(users);
-
   return (
     <div className="tc">
       <Navbar
