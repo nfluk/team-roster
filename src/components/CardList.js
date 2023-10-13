@@ -22,6 +22,7 @@ function CardList({ users, loading }) {
         id={user.id}
         firstName={user.firstName}
         lastName={user.lastName}
+        phone={user.phone}
         email={user.email}
         division={user.company.department}
         title={user.company.title}
