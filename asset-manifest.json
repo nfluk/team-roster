@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/team-roster/static/css/main.05e88ffe.css",
-    "main.js": "/team-roster/static/js/main.7af8c0a5.js",
+    "main.js": "/team-roster/static/js/main.c2e49ec4.js",
     "static/js/787.93a2c678.chunk.js": "/team-roster/static/js/787.93a2c678.chunk.js",
     "static/media/nintendo.otf": "/team-roster/static/media/nintendo.c7714066bfb699fbc0db.otf",
     "index.html": "/team-roster/index.html",
     "main.05e88ffe.css.map": "/team-roster/static/css/main.05e88ffe.css.map",
-    "main.7af8c0a5.js.map": "/team-roster/static/js/main.7af8c0a5.js.map",
+    "main.c2e49ec4.js.map": "/team-roster/static/js/main.c2e49ec4.js.map",
     "787.93a2c678.chunk.js.map": "/team-roster/static/js/787.93a2c678.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.05e88ffe.css",
-    "static/js/main.7af8c0a5.js"
+    "static/js/main.c2e49ec4.js"
   ]
 }
