@@ -8,12 +8,12 @@ function App() {
   const [searchfield, setSearchfield] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const division = 'sales';
+  const organizationName = 'Capsule Corp.';
 
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users')
+    fetch('https://dummyjson.com/users?limit=13')
       .then((response) => response.json())
-      .then((users) => setUsers(users));
+      .then((data) => setUsers(data.users));
   }, []);
 
   useEffect(() => {
@@ -27,14 +27,20 @@ function App() {
   };
 
   const filteredUsers = users.filter((user) => {
-    return user.name.toLowerCase().includes(searchfield.toLowerCase());
+    const userName = `${user.firstName} ${user.lastName}`;
+    return userName.toLowerCase().includes(searchfield.toLowerCase());
   });
+
+  console.log(users);
 
   return (
     <div className="tc">
-      <Navbar onSearchChange={onSearchChange} division={division} />
+      <Navbar
+        onSearchChange={onSearchChange}
+        organizationName={organizationName}
+      />
       <Scroll>
-        <CardList users={filteredUsers} loading={loading} division={division} />
+        <CardList users={filteredUsers} loading={loading} />
       </Scroll>
     </div>
   );
